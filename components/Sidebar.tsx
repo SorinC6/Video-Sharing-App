@@ -5,6 +5,8 @@ import Link from "next/link";
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
 
+import Discover from "./DIscover";
+
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<Boolean>(true);
   const { pathname } = useRouter();
@@ -37,8 +39,8 @@ const Sidebar = () => {
               </div>
             </Link>
           </div>
-
-          {/* <Discover />
+          <Discover />
+          {/*
           <SuggestedAccounts
             fetchAllUsers={fetchAllUsers}
             allUsers={allUsers}
