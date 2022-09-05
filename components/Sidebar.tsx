@@ -6,6 +6,8 @@ import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
 
 import Discover from "./DIscover";
+import Footer from "./Footer";
+import SuggestedAccounts from "./SuggestedAccounts";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<Boolean>(true);
@@ -40,12 +42,11 @@ const Sidebar = () => {
             </Link>
           </div>
           <Discover />
-          {/*
           <SuggestedAccounts
-            fetchAllUsers={fetchAllUsers}
-            allUsers={allUsers}
+          // fetchAllUsers={fetchAllUsers}
+          // allUsers={allUsers}
           />
-          <Footer /> */}
+          <Footer />
         </div>
       )}
     </div>
