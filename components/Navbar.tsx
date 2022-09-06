@@ -6,6 +6,7 @@ import { AiOutlineLogout } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { IoMdAdd } from "react-icons/io";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
+import { createOrGetUser } from "../utils";
 
 import Logo from "../utils/tiktik-logo.png";
 import { IUser } from "../types";
@@ -71,7 +72,7 @@ const Navbar = () => {
               type="button"
               className=" border-2 p-2 rounded-full cursor-pointer outline-none shadow-md"
               onClick={() => {
-                // googleLogout();
+                googleLogout();
                 // removeUser();
               }}
             >
@@ -80,7 +81,12 @@ const Navbar = () => {
           </div>
         ) : (
           <GoogleLogin
-            // onSuccess={(response) => createOrGetUser(response, addUser)}
+            onSuccess={(response) =>
+              createOrGetUser(
+                response
+                //addUser
+              )
+            }
             onError={() => console.log("Login Failed")}
           />
         )}
