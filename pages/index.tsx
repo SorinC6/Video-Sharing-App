@@ -40,10 +40,9 @@ export const getServerSideProps = async ({
   query: { topic: string };
 }) => {
   let response = await axios.get(`http://localhost:3000/api/post`);
-  console.log("@@@@@response", response);
-  // if (topic) {
-  //   response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
-  // }
+  if (topic) {
+    response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
+  }
 
   return {
     props: { videos: response.data },

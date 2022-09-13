@@ -42,7 +42,7 @@ const VideoCard: NextPage<IProps> = ({
   if (!isShowingOnHome) {
     return (
       <div>
-        <Link href={`/detail/${_id}`}>
+        <Link href={`/video/${_id}`}>
           <video
             loop
             src={video.asset.url}
@@ -55,7 +55,7 @@ const VideoCard: NextPage<IProps> = ({
             {likes?.length || 0}
           </p>
         </div>
-        <Link href={`/detail/${_id}`}>
+        <Link href={`/video/${_id}`}>
           <p className="mt-5 text-md text-gray-800 cursor-pointer w-210">
             {caption}
           </p>
@@ -94,7 +94,7 @@ const VideoCard: NextPage<IProps> = ({
                 </p>
               </div>
             </Link>
-            <Link href={`/detail/${_id}`}>
+            <Link href={`/video/${_id}`}>
               <p className="mt-2 font-normal ">{caption}</p>
             </Link>
           </div>
