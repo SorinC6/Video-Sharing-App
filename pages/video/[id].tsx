@@ -7,9 +7,9 @@ import { MdOutlineCancel } from "react-icons/md";
 import { BsFillPlayFill } from "react-icons/bs";
 import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
 
-// import Comments from "../../components/Comments";
+import Comments from "../../components/Comments";
 import { BASE_URL } from "../../utils";
-// import LikeButton from "../../components/LikeButton";
+import LikeButton from "../../components/LikeButton";
 import useAuthStore from "../../store/authStore";
 import { Video } from "../../types";
 import axios from "axios";
@@ -139,7 +139,7 @@ const Detail = ({ postDetails }: IProps) => {
               <div className="px-10">
                 <p className=" text-md text-gray-600">{post.caption}</p>
               </div>
-              {/* <div className="mt-10 px-10">
+              <div className="mt-10 px-10">
                 {userProfile && (
                   <LikeButton
                     likes={post.likes}
@@ -148,14 +148,14 @@ const Detail = ({ postDetails }: IProps) => {
                     handleDislike={() => handleLike(false)}
                   />
                 )}
-              </div> */}
-              {/* <Comments
+              </div>
+              <Comments
                 comment={comment}
                 setComment={setComment}
                 addComment={addComment}
                 comments={post.comments}
                 isPostingComment={isPostingComment}
-              /> */}
+              />
             </div>
           </div>
         </div>
