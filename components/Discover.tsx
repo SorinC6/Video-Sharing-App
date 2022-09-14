@@ -25,11 +25,11 @@ const Discover: NextPage = () => {
             <div
               className={topic === item.name ? activeTopicStyle : topicStyle}
             >
-              <span className="font-bold text-2xl xl:text-md ">
+              <span className="font-bold text-1xl xl:text-md ">
                 {item.icon}
               </span>
               <span
-                className={`font-medium text-md hidden xl:block capitalize`}
+                className={`font-medium text-sm hidden xl:block capitalize`}
               >
                 {item.name}
               </span>
