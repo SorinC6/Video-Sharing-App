@@ -39,7 +39,7 @@ export const getServerSideProps = async ({
 }: {
   query: { topic: string };
 }) => {
-  let response = await axios.get(`http://localhost:3000/api/post`);
+  let response = await axios.get(`${BASE_URL}/api/post`);
   if (topic) {
     response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
   }
