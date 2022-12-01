@@ -9,7 +9,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import { createOrGetUser } from "../utils";
 import useAuthStore from "../store/authStore";
 
-import Logo from "../utils/tiktik-logo.png";
+import Logo from "../utils/app-logo.png";
 import { IUser } from "../types";
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
       <Link href="/">
-        <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px]">
+        <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px] mb-4">
           <Image
             className="cursor-pointer"
             src={Logo}
@@ -51,7 +51,7 @@ const Navbar = () => {
           <input
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            className="bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-full  md:top-0"
+            className="bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-lg  md:top-0"
             placeholder="Search accounts and videos"
           />
           <button
